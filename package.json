@@ -1,0 +1,29 @@
+{
+  "name": "epubchk",
+  "version": "1.0.0",
+  "description": "EPUB 电子书目录与资源一致性检查后端（API + CLI）",
+  "main": "dist/src/cli.js",
+  "scripts": {
+    "test": "npm run build && node --test \"dist/test/*.test.js\"",
+    "build": "tsc",
+    "start": "npm run build && node dist/src/cli.js serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "adm-zip": "^0.6.1",
+    "better-sqlite3": "^13.0.3",
+    "fast-xml-parser": "^5.11.2"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.8",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  },
+  "bin": {
+    "epubchk": "dist/src/cli.js"
+  }
+}
